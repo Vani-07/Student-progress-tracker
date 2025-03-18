@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment - Student Progress Tracker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .navbar {
+            background-color: #4e2fc8;
+            overflow: hidden;
+            text-align: center;
+            padding: 10px 0;
+        }
+        .navbar a {
+            display: inline-block;
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .card {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .card h2 {
+            margin-bottom: 10px;
+            font-size: 24px;
+            color: #4e2fc8;
+        }
+        .card p {
+            margin-bottom: 10px;
+        }
+        .card button {
+            background-color: #4e2fc8;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .card button:hover {
+            background-color: #3e23a8;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <a href="#attendance">Attendance</a>
+        <a href="#grades">Grades</a>
+        <a href="#communication">Communication</a>
+        <a href="#assignment">Assignment</a>
+        <a href="#" onclick="logout()">Logout</a>
+    </div>
+
+    <div class="container">
+        <h1>Assignment</h1>
+
+        <div class="card">
+            <h2>Math Assignment</h2>
+            <p><strong>Due Date:</strong> July 10, 2024</p>
+            <p><strong>Description:</strong> Solve the exercises from Chapter 5.</p>
+          
+        </div>
+
+        <div class="card">
+            <h2>History Research Paper</h2>
+            <p><strong>Due Date:</strong> July 15, 2024</p>
+            <p><strong>Description:</strong> Write a 5-page paper on World War II.</p>
+            
+        </div>
+
+        <div class="card">
+            <h2>Science Project</h2>
+            <p><strong>Due Date:</strong> July 20, 2024</p>
+            <p><strong>Description:</strong> Build a working model of the solar system.</p>
+            
+        </div>
+    </div>
+
+    <script>
+        function logout() {
+            alert('You have logged out.');
+        }
+    </script>
+
+</body>
+</html>
