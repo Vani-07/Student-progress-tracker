@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Progress Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            background-image: url('background.jpg'); /* Replace 'background.jpg' with your image path */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .navbar {
+            background-color:  #4e2fc8; /* Semi-transparent background for better readability */
+            overflow: hidden;
+            text-align: center;
+            position: relative; /* Ensures navbar stays on top of background image */
+            z-index: 1; /* Ensures navbar is above background image */
+        }
+        .navbar a, .navbar button {
+            display: inline-block;
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-size: 18px;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+        .navbar a:hover, .navbar button:hover {
+            background-color: #3e23a8;
+        }
+        .container {
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            z-index: 0; /* Ensures cards are below navbar */
+            position: relative; /* Allows z-index to work */
+        }
+        .card {
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background for cards */
+            width: 300px;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .card h2 {
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 10px;
+        }
+        .card p {
+            margin: 10px 0;
+        }
+        .card button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            background-color: #4e2fc8;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .card button:hover {
+            background-color: #3e23a8;
+        }
+        .butt{
+            text-decoration-line: none;
+            color: white;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <a href="#attendance">Attendance</a>
+        <a href="#grades">Grades</a>
+        <a href="#communication">Communication</a>
+        <a href="#assignment">Assignment</a>
+        <button onclick="logout()">Logout</button>
+    </div>
+
+    <div class="container">
+        <div id="attendance" class="card">
+            <h2>Attendance</h2>
+            <p>View attendance data here</p>
+            <button type="submit">
+                <a class="butt" href="Attendance.html">Show Attendance</a>
+            </button>
+        </div>
+
+        <div id="grades" class="card">
+            <h2>Grades</h2>
+            <p>View grades data here</p>
+            
+            <button > 
+                <a class="butt" href="grades.html">Show Grades</a>
+            </button>
+    
+        </div>
+
+        <div id="communication" class="card">
+            <h2>Communication</h2>
+            <p>View communication data here</p>
+            <button>
+                <a class="butt" href="communication.html">Open Communication</a>
+            </button>
+        </div>
+        
+        <div id="assignment" class="card">
+            <h2>Assignment</h2>
+            <p>View assignment data here</p>
+            <button>
+                <a class="butt" href="assignment.html">Show Assignment</a>
+            </button>
+        </div>
+    </div>
+
+    <script>
+        function logout() {
+            // Add logout functionality here
+            alert("You have logged out.");
+        }
+    </script>
+
+</body>
+</html>

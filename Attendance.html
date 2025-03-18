@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Attendance</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .attendance-container {
+            width: 80%;
+            height: 70vh;
+            margin: 20px;
+            border-collapse: collapse;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow-y: auto;
+        }
+        .attendance-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 12px;
+            text-align: center;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        tr:hover {
+            background-color: #ddd;
+        }
+        .present {
+            background-color: #c6efce;
+        }
+        .absent {
+            background-color: #ffc7ce;
+        }
+    </style>
+</head>
+<body>
+    <div class="attendance-container">
+        <h2>Student Attendance</h2>
+        <div style="overflow-y: auto; height: 60vh;">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Student ID</th>
+                        <th>Student Name</th>
+                        <th>Attendance</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- 55 Students Rows -->
+                    <tr>
+                        <td>001</td>
+                        <td>John Doe</td>
+                        <td class="present">Present</td>
+                    </tr>
+                    <tr>
+                        <td>002</td>
+                        <td>Jane Smith</td>
+                        <td class="absent">Absent</td>
+                    </tr>
+                    <tr>
+                        <td>003</td>
+                        <td>Michael Brown</td>
+                        <td class="present">Present</td>
+                    </tr>
+                    <tr>
+                        <td>004</td>
+                        <td>Emily Johnson</td>
+                        <td class="present">Present</td>
+                    </tr>
+                    <tr>
+                        <td>005</td>
+                        <td>Chris Davis</td>
+                        <td class="absent">Absent</td>
+                    </tr>
+                    <tr>
+                        <td>006</td>
+                        <td>Sarah Wilson</td>
+                        <td class="present">Present</td>
+                    </tr>
+                    <tr>
+                        <td>007</td>
+                        <td>David Lee</td>
+                        <td class="absent">Absent</td>
+                    </tr>
+                    <tr>
+                        <td>008</td>
+                        <td>Jessica Moore</td>
+                        <td class="present">Present</td>
+                    </tr>
+                    <tr>
+                        <td>009</td>
+                        <td>Daniel Clark</td>
+                        <td class="absent">Absent</td>
+                    </tr>
+                    <tr>
+                        <td>010</td>
+                        <td>Amy Lewis</td>
+                        <td class="present">Present</td>
+                    </tr>
+                    <tr>
+                        <td>011</td>
+                        <td>Ryan Walker</td>
+                        <td class="absent">Absent</td>
+                    </tr>
+                    <tr>
+                        <td>012</td>
+                        <td>Laura Hall</td>
+                        <td class="present">Present</td>
+                    </tr>
+                    <tr>
+                        <td>013</td>
+                        <td>Adam Allen</td>
+                        <td class="present">Present</td>
+                    </tr>
+                    <tr>
+                        <td>014</td>
+                        <td>Karen Young</td>
+                        <td class="absent">Absent</td>
+                    </tr>
+                    <tr>
+                        <td>015</td>
+                        <td>Matthew King</td>
+                        <td class="present">Present</td>
+                    </tr>
+                    <tr>
+                        <td>016</td>
+                        <td>Olivia Wright</td>
+                        <td class="absent">Absent</td>
+                    </tr>
+                    <tr>
+                        <td>017</td>
+                        <td>Joshua Hill</td>
+                        <td class="present">Present</td>
+                    </tr>
+                    <tr>
+                        <td>018</td>
+                        <td>Sophia Scott</td>
+                        <td class="absent">Absent</td>
+                    </tr>
+                    <tr>
+                        <td>019</td>
+                        <td>Lucas Green</td>
+                        <td class="present">Present</td>
+                    </tr>
+                    <tr>
+                        <td>020</td>
+                        <td>Mia Adams</td>
+                        <td class="absent">Absent</td>
+                    </tr>
+                    <tr>
+                        <td>021</td>
+                        <td>Elijah Baker</td>
+                        <td class="present">Present</td>
+                    </tr>
+                    <tr>
+                        <td>022</td>
+                        <td>Isabella Gonzalez</td>
+                        <td class="present">Present</td>
+                    </tr>
+                    <tr>
+                        <td>023</td>
+                        <td>Aiden Martinez</td>
+                        <td class="absent">Absent</td>
+                    </tr>
+                    <tr>
+                        <td>024</td>
+                        <td>Zoe Perez</td>
+                        <td class="present">Present</td>
+                    </tr>
+                    <tr>
+                        <td>025</td>
+                        <td>Jackson Turner</td>
+                        <td class="absent">Absent</td>
+                    </tr>
+                    <tr>
+                        <td>026</td>
+                        <td>Ella White</td>
+                        <td class="present">Present</td>
+                    </tr>
+                    <tr>
+                        <td>027</td>
+                        <td>Liam Harris</td>
+                        <td class="absent">Absent</td>
+                    </tr>
+                    <tr>
+                        <td>028</td>
+                        <td>Ava Sanchez</td>
+                        <td class="present">Present</td>
+                    </tr>
+                    <tr>
+                        <td>029</td>
+                        <td>William Clark</td>
+                        <td class="absent">Absent</td>
+                    </tr>
+                    <tr>
+                        <td>030</td>
+                        <td>Sofia Ramirez</td>
+                        <td class="present">Present</td>
+                    </tr>
+                    <tr>
+                        <td>031</td>
+                        <td>Lucas Anderson</td>
+                        <td class="absent">Absent</td>
+                    </tr>
+                    <tr>
+                        <td>032</td>
+                        <td>Grace Thomas</td>
+                        <td class="present">Present</td>
+                    </tr>
+                    <tr>
+                        <td>033</td>
+                        <td>Jack Thompson</td>
+                        <td class="absent">Absent</td>
+                    </tr>
+                    <tr>
+                        <td>034</td>
+                        <td>Lily Hernandez</td>
+                        <td class="present">Present</td>
+                    </tr>
+                    <tr>
+                        <td>035</td>
+                        <td>Samuel Martinez</td>
+                        <td class="absent">Absent</td>
+                    </tr>
+                    <tr>
+                        <td>036</td>
+                        <td>Zoey Garcia</td>
+                        <td class="present">Present</td>
+                    </tr>
+                    <tr>
+                        <td>037</td>
+                        <td>Benjamin Rodriguez</td>
+                        <td class="absent">Absent</td>
+                    </tr>
+                    <tr>
+                        <td>038</td>
+                        <td>Hannah Lee</td>
+                        <td class="present">Present</td>
+                    </tr>
+                    <tr>
+                        <td>039</td>
+                        <td>Matthew Walker</td>
+                        <td class="absent">Absent</td>
+                    </tr>
+                    <tr>
+                        <td>040</td>
+                        <td>Ava King</td>
+                        <td class="present">Present</td>
+                    </tr>
+                    <tr>
+                        <td>041</td>
+                        <td>Alexander Wright</td>
+                        <td class="absent">Absent</td>
+                    </tr>
+                    <tr>
+                        <td>042</td>
+                        <td>Isla Scott</td>
+                        <td class="present">Present</td>
+                    </tr>
+                    <tr>
+                        <td>043</td>
+                        <td>David Green</td>
+                        <td class="absent">Absent</td>
+                    </tr>
+                    <tr>
+                        <td>044</td>
+                        <td>Chloe Adams</td>
+                        <td class="present">Present</td>
+                    </tr>
+                    <tr>
+                        <td>045</td>
+                        <td>Logan Baker</td>
+                        <td class="absent">Absent</td>
+                    </tr>
+                    <tr>
+                        <td>046</td>
+                        <td>Ella Gonzalez</td>
+                        <td class="present">Present</td>
+                    </tr>
+                    <tr>
+                        <td>047</td>
+                        <td>Daniel Young</td>
+                        <td class="absent">Absent</td>
+                    </tr>
+                    <tr>
+                        <td>048</td>
+                        <td>Sophie Hill</td>
+                        <td class="present">Present</td>
+                    </tr>
+                    <tr>
+                        <td>049</td>
+                        <td>Christopher Allen</td>
+                        <td class="absent">Absent</td>
+                    </tr>
+                    <tr>
+                        <td>050</td>
+                        <td>Emily Hernandez</td>
+                        <td class="present">Present</td>
+                    </tr>
+                    <tr>
+                        <td>051</td>
+                        <td>Matthew Harris</td>
+                        <td class="absent">Absent</td>
+                    </tr>
+                    <tr>
+                        <td>052</td>
+                        <td>Alice Clark</td>
+                        <td class="present">Present</td>
+                    </tr>
+                    <tr>
+                        <td>053</td>
+                        <td>James Lewis</td>
+                        <td class="absent">Absent</td>
+                    </tr>
+                    <tr>
+                        <td>054</td>
+                        <td>Charlotte Young</td>
+                        <td class="present">Present</td>
+                    </tr>
+                    <tr>
+                        <td>055</td>
+                        <td>Oliver Walker</td>
+                        <td class="absent">Absent</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
+

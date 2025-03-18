@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Grades</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f5f5f5;
+        }
+
+        .grades-container {
+            width: 80%;
+            max-width: 1000px;
+            margin: 20px;
+            border-collapse: collapse;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow-y: auto;
+            max-height: 600px; /* Set a fixed maximum height for scroll */
+        }
+
+        .grades-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #ddd;
+        }
+
+        .grade-a {
+            background-color: #c6efce;
+        }
+
+        .grade-b {
+            background-color: #ffeb99;
+        }
+
+        .grade-c {
+            background-color: #ffcc99;
+        }
+
+        .grade-d {
+            background-color: #ffc7ce;
+        }
+
+        .grade-f {
+            background-color: #ff9999;
+        }
+    </style>
+</head>
+<body>
+    <div class="grades-container">
+        <h2>Student Grades</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Student ID</th>
+                    <th>Student Name</th>
+                    <th>Math</th>
+                    <th>Science</th>
+                    <th>English</th>
+                    <th>History</th>
+                    <th>Average Grade</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Sample data for 55 students -->
+                <tr>
+                    <td>001</td>
+                    <td>John Doe</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-b">B</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-b">B</td>
+                    <td class="grade-a">A</td>
+                </tr>
+                <tr>
+                    <td>002</td>
+                    <td>Latha</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-b">B</td>
+                    <td class="grade-a">A</td>
+                </tr>
+                <tr>
+                    <td>003</td>
+                    <td>Siri</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-b">B</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-a">A</td>
+                </tr>
+                <tr>
+                    <td>004</td>
+                    <td>Mani</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-b">B</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-b">B</td>
+                    <td class="grade-b">B</td>
+                </tr>
+                <tr>
+                    <td>005</td>
+                    <td>Viya</td>
+                    <td class="grade-b">B</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-b">B</td>
+                    <td class="grade-a">A</td>
+                </tr>
+                <tr>
+                    <td>006</td>
+                    <td>Navya</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-b">B</td>
+                    <td class="grade-b">B</td>
+                    <td class="grade-a">A</td>
+                </tr>
+                <tr>
+                    <td>007</td>
+                    <td>Ashna</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-a">A</td>
+                </tr>
+                <tr>
+                    <td>008</td>
+                    <td>Janaki</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-b">B</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-b">B</td>
+                    <td class="grade-a">A</td>
+                </tr>
+                <tr>
+                    <td>009</td>
+                    <td>pavani</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-b">B</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-b">B</td>
+                    <td class="grade-a">A</td>
+                </tr>
+                <tr>
+                    <td>010</td>
+                    <td>Kats</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-b">B</td>
+                    <td class="grade-a">A</td>
+                </tr>
+                <tr>
+                    <td>011</td>
+                    <td>John </td>
+                    <td class="grade-b">B</td>
+                    <td class="grade-b">B</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-b">B</td>
+                    <td class="grade-a">A</td>
+                </tr>
+                <tr>
+                    <td>012</td>
+                    <td>Shiv</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-a">A</td>
+                </tr>
+                <tr>
+                    <td>013</td>
+                    <td>Varun</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-b">B</td>
+                    <td class="grade-a">A</td>
+                </tr>
+                <tr>
+                    <td>014</td>
+                    <td>Ram</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-b">B</td>
+                    <td class="grade-b">B</td>
+                    <td class="grade-b">B</td>
+                    <td class="grade-a">A</td>
+                </tr>
+                <tr>
+                    <td>015</td>
+                    <td>Vani</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-a">A</td>
+                </tr>
+                <tr>
+                    <td>016</td>
+                    <td>Anu</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-b">B</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-b">B</td>
+                    <td class="grade-a">A</td>
+                </tr>
+                <tr>
+                    <td>017</td>
+                    <td>Phool</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-b">B</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-a">A</td>
+                </tr>
+                <tr>
+                    <td>018</td>
+                    <td>Deepak</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-a">A</td>
+                </tr>
+                <tr>
+                    <td>019</td>
+                    <td>Bebo</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-b">B</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-b">B</td>
+                    <td class="grade-a">A</td>
+                </tr>
+                <tr>
+                    <td>020</td>
+                    <td>Alam</td>
+                    <td class="grade-b">B</td>
+                    <td class="grade-b">B</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-b">B</td>
+                    <td class="grade-a">A</td>
+                </tr>
+                <tr>
+                    <td>021</td>
+                    <td>Cartwright</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-a">A</td>
+                </tr>
+                <tr>
+                    <td>022</td>
+                    <td>Sita</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-a">A</td>
+                </tr>
+                <tr>
+                    <td>023</td>
+                    <td>Nabs</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-b">B</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-a">A</td>
+                </tr>
+                <tr>
+                    <td>024</td>
+                    <td>Pihu</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-b">B</td>
+                    <td class="grade-a">A</td>
+                </tr>
+                <tr>
+                    <td>025</td>
+                    <td>Nitya</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-b">B</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-b">B</td>
+                    <td class="grade-a">A</td>
+                </tr>
+                <tr>
+                    <td>026</td>
+                    <td>Sam</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-b">B</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-b">B</td>
+                    <td class="grade-a">A</td>
+                </tr>
+                <tr>
+                    <td>027</td>
+                    <td>Fara</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-b">B</td>
+                    <td class="grade-a">A</td>
+                </tr>
+                <tr>
+                    <td>028</td>
+                    <td>Harsh</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-b">B</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-b">B</td>
+                    <td class="grade-a">A</td>
+                </tr>
+                <tr>
+                    <td>029</td>
+                    <td>Arbaz</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-b">B</td>
+                    <td class="grade-b">B</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-a">A</td>
+                </tr>
+                <tr>
+                    <td>030</td>
+                    <td>Kitty</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-b">B</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-b">B</td>
+                    <td class="grade-a">A</td>
+                </tr>
+                <tr>
+                    <td>031</td>
+                    <td>Alia</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-b">B</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-a">A</td>
+                </tr>
+                <tr>
+                    <td>032</td>
+                    <td>Ruhan</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-b">B</td>
+                    <td class="grade-b">B</td>
+                    <td class="grade-b">A</td>
+                    <td class="grade-a">A</td>
+                </tr>
+                <tr>
+                    <td>033</td>
+                    <td>Noya</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-b">B</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-b">B</td>
+                    <td class="grade-a">A</td>
+                </tr>
+                <tr>
+                    <td>034</td>
+                    <td>Abbu</td>
+                    <td class="grade-b">B</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-a">A</td>
+                </tr>
+                <tr>
+                    <td>035</td>
+                    <td>Soumya</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-b">B</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-b">B</td>
+                    <td class="grade-a">A</td>
+                </tr>
+                <tr>
+                    <td>036</td>
+                    <td>Vinay</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-a">A</td>
+                </tr>
+                <tr>
+                    <td>037</td>
+                    <td>Tara</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-b">B</td>
+                    <td class="grade-a">A</td>
+                </tr>
+                <tr>
+                    <td>038</td>
+                    <td>Mohan</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-b">B</td>
+                    <td class="grade-b">B</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-a">A</td>
+                </tr>
+                <tr>
+                    <td>039</td>
+                    <td>Kavya</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-a">A</td>
+                </tr>
+                <tr>
+                    <td>040</td>
+                    <td>Sajid</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-b">B</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-b">B</td>
+                    <td class="grade-a">A</td>
+                </tr>
+                <tr>
+                    <td>041</td>
+                    <td>Sarayu</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-b">B</td>
+                    <td class="grade-b">B</td>
+                    <td class="grade-b">B</td>
+                    <td class="grade-a">A</td>
+                </tr>
+                <tr>
+                    <td>042</td>
+                    <td>Sitara</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-b">B</td>
+                    <td class="grade-a">A</td>
+                </tr>
+                <tr>
+                    <td>043</td>
+                    <td>Manish</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-b">B</td>
+                    <td class="grade-b">B</td>
+                </tr>
+                <tr>
+                    <td>044</td>
+                    <td>Rupas</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-b">B</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-b">B</td>
+                    <td class="grade-a">A</td>
+                </tr>
+                <tr>
+                    <td>045</td>
+                    <td>Nida</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-b">B</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-a">A</td>
+                </tr>
+                <tr>
+                    <td>046</td>
+                    <td>Vishal</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-a">A</td>
+                </tr>
+                <tr>
+                    <td>047</td>
+                    <td>Sweety</td>
+                    <td class="grade-b">B</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-b">B</td>
+                    <td class="grade-a">A</td>
+                </tr>
+                <tr>
+                    <td>048</td>
+                    <td>Siwet</td>
+                    <td class="grade-b">B</td>
+                    <td class="grade-b">B</td>
+                    <td class="grade-b">B</td>
+                    <td class="grade-b">B</td>
+                    <td class="grade-a">A</td>
+                </tr>
+                <tr>
+                    <td>049</td>
+                    <td>Anica</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-a">A</td>
+                </tr>
+                <tr>
+                    <td>050</td>
+                    <td>Pranay</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-b">B</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-b">B</td>
+                    <td class="grade-a">A</td>
+                </tr>
+                <tr>
+                    <td>051</td>
+                    <td>Teja</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-b">B</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-b">B</td>
+                    <td class="grade-a">A</td>
+                </tr>
+                <tr>
+                    <td>052</td>
+                    <td>Riha</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-b">B</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-b">B</td>
+                    <td class="grade-a">A</td>
+                </tr>
+                <tr>
+                    <td>053</td>
+                    <td>Robin</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-b">B</td>
+                    <td class="grade-b">B</td>
+                    <td class="grade-b">A</td>
+                    <td class="grade-a">A</td>
+                </tr>
+                <tr>
+                    <td>054</td>
+                    <td>Gautham</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-a">A</td>
+                </tr>
+                  <tr>
+                    <td>055</td>
+                    <td>Sophia Taylor</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-a">A</td>
+                    <td class="grade-b">B</td>
+                    <td class="grade-b">B</td>
+                    <td class="grade-a">A</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
